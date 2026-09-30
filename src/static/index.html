@@ -8,8 +8,28 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-content">
+        <div class="school-heading">
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <div class="teacher-controls">
+          <button id="teacher-login-toggle" type="button">Teacher login</button>
+          <button id="teacher-logout" class="hidden" type="button">Log out</button>
+        </div>
+      </div>
+      <form id="teacher-login-form" class="teacher-login-form hidden">
+        <div class="form-group">
+          <label for="teacher-username">Username</label>
+          <input id="teacher-username" name="username" autocomplete="username" required />
+        </div>
+        <div class="form-group">
+          <label for="teacher-password">Password</label>
+          <input id="teacher-password" name="password" type="password" autocomplete="current-password" required />
+        </div>
+        <button type="submit">Log in</button>
+      </form>
+      <p id="login-message" class="login-message hidden" aria-live="polite"></p>
     </header>
 
     <main>
@@ -21,7 +41,7 @@
         </div>
       </section>
 
-      <section id="signup-container">
+      <section id="signup-container" class="hidden">
         <h3>Sign Up for an Activity</h3>
         <form id="signup-form">
           <div class="form-group">
@@ -39,6 +59,7 @@
         </form>
         <div id="message" class="hidden"></div>
       </section>
+      <p id="teacher-notice">Teacher sign-in is required to manage registrations.</p>
     </main>
 
     <footer>
