@@ -16,16 +16,51 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 20px 0;
+  padding: 20px 24px;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.school-heading {
+  flex: 1;
+  text-align: center;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.teacher-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.teacher-login-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
+  gap: 12px;
+  max-width: 720px;
+  margin: 20px auto 0;
+}
+
+.teacher-login-form .form-group {
+  margin-bottom: 0;
+}
+
+.login-message,
+#teacher-notice {
+  margin-top: 12px;
+  text-align: center;
 }
 
 main {
@@ -197,4 +232,18 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 18px 14px;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+
+  .teacher-login-form {
+    grid-template-columns: 1fr;
+  }
 }
